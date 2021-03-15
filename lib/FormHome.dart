@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_apps/FormStateFull.dart';
 
 class FormHome extends StatelessWidget {
-
-
   @override
   Widget build(BuildContext context) {
     var _formKey = GlobalKey<FormState>();
@@ -17,11 +15,11 @@ class FormHome extends StatelessWidget {
         return;
       }
       _formKey.currentState.save();
-      Navigator.of(context).push(MaterialPageRoute(
-          builder: (BuildContext context) => FormStateFull()));
+      Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => FormStateFull()));
     }
 
-    return SafeArea(minimum: EdgeInsets.all(0),
+    return SafeArea(
+        minimum: EdgeInsets.all(0),
         child: Scaffold(
           body: Container(
             alignment: Alignment.center,
@@ -31,7 +29,6 @@ class FormHome extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-
                 TextField(
                   //controller: _messageController,
                   minLines: 1,
@@ -39,9 +36,7 @@ class FormHome extends StatelessWidget {
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       hintText: "Enter Mobile Number",
-                      labelText: "Mobile Number"
-                  ),
-
+                      labelText: "Mobile Number"),
                 ),
                 SizedBox(
                   height: 20,
@@ -52,11 +47,11 @@ class FormHome extends StatelessWidget {
                       autovalidate: true,
                       child: Column(
                         children: [
-                        TextFormField(
-
+                          TextFormField(
                             decoration: InputDecoration(
                                 border: OutlineInputBorder(),
-                                prefixIcon: Icon(Icons.mail,
+                                prefixIcon: Icon(
+                                  Icons.mail,
                                   color: Colors.blue,
                                 ),
                                 labelText: 'E-Mail'),
@@ -78,10 +73,10 @@ class FormHome extends StatelessWidget {
                             height: MediaQuery.of(context).size.width * 0.1,
                           ),
                           TextFormField(
-                            decoration: InputDecoration(labelText: 'Password',
-                            border: OutlineInputBorder(),
-                            prefixIcon: Icon(Icons.lock,
-                            color: Colors.blue),
+                            decoration: InputDecoration(
+                              labelText: 'Password',
+                              border: OutlineInputBorder(),
+                              prefixIcon: Icon(Icons.lock, color: Colors.blue),
                             ),
                             keyboardType: TextInputType.emailAddress,
                             controller: password,
@@ -111,17 +106,11 @@ class FormHome extends StatelessWidget {
                             onPressed: () => _submit(),
                           )
                         ],
-                      )
-                  ),
+                      )),
                 )
-
               ],
             ),
-
-
-
           ),
         ));
   }
 }
-
