@@ -31,6 +31,9 @@ dependencies:
   retrofit: any
   logger: any
   animated_splash_screen: ^1.0.1+2
+  form_field_validator: ^1.0.1
+  super_tooltip: ^1.0.1
+  simple_tooltip: ^0.1.16
 
 
   # The following adds the Cupertino Icons font to your application.

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_apps/FormHome.dart';
 import 'package:flutter_apps/Home.dart';
+import 'package:flutter_apps/SampleCode.dart';
+import 'package:flutter_apps/validationData.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 void main() {
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "My Application",
-      home: FormHome(),
+      home: MyAppli(),
     );
   }
 }
